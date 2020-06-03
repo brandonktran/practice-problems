@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function createRepeatingLetters(word, numOfRepeats) {
+            var i=0;
+            var j=0;
+            var result = '';
+            while (j<word.length) {
+                if (i<numOfRepeats) {
+                    result+=word[j];
+                    i++;
+                } else {
+                    j++;
+                    i=0;
+                }
+            }
+            return result;
+        }
+        console.log(createRepeatingLetters("John", 3),
+            createRepeatingLetters("car", 4),
+            createRepeatingLetters("howdy", 1));
+    </script>
+</body>
+</html>
