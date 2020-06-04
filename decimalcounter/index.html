@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function decimalPlaceCounter(stringNumber) {
+            var i = 0;
+            var result = 0;
+            while (i < stringNumber.length) {
+                if (stringNumber[i] !== '.') {
+                    i++;
+                } else if (stringNumber[i] === '.') {
+                    i++;
+                    for (var j=i; j<stringNumber.length; j++) {
+                        result++;
+                    }
+                }
+            }
+            return result;
+        }
+        console.log(decimalPlaceCounter("127.245"),
+            decimalPlaceCounter("145"),
+            decimalPlaceCounter("23.00"));
+    </script>
+</body>
+</html>
