@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //pseudocode
+        //define function named isWithinRange with two arguments number and object for range
+        //check whether number is greater or equal to min and less than or equal to max
+        // if it is, then return true
+        //if it isnt, then return false
+
+        function isWithinRange(number, rangeObject) {
+            if (number >= rangeObject['min'] && number <= rangeObject['max']) {
+                return true;
+            }
+            return false;
+        }
+
+        console.log(isWithinRange(5, { min: 1, max: 9 }),
+            isWithinRange(12, { min: 15, max: 29 }),
+            isWithinRange(9, { min: 0, max: 9 }),)
+    </script>
+</body>
+</html>
