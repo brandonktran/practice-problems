@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function removeNullValues(array) {
+            return array.filter(isNotNull);
+        }
+
+        function isNotNull(element) {
+            if (element !== null) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        console.log(removeNullValues([3, 5, null, null, 87, "hello", "goodbye"]),
+            removeNullValues([true, null, false, {}, null, 43, "node"]),
+            removeNullValues([null, null, null, 7, null, "eight"]),
+            )
+    </script>
+</body>
+</html>
