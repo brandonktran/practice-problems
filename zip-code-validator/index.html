@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function zipCodeValidator(zipToValidate) {
+            if (zipToValidate.length === 5 && !zipToValidate.includes(' ')) {
+                if (parseFloat(zipToValidate).toString().length === zipToValidate.length)
+                    return true;
+            }
+            return false;
+        }
+        console.log(zipCodeValidator("21594"),
+            zipCodeValidator("3Eds32"),
+            zipCodeValidator("9123465"))
+    </script>
+</body>
+
+</html>
