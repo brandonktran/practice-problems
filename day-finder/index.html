@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const obj = { '0': 'Sunday', '1': 'Monday', '2': 'Tuesday', '3': 'Wednesday', '4': 'Thursday', '5': 'Friday', '6': 'Saturday' }
+        function dayFinder(stringDate) {
+            const [month, day, year] = stringDate.split('/');
+            console.log(month, day, year);
+            const date = new Date(year, month - 1, day);
+            const dayOfWeek = date.getDay();
+            return obj[`${dayOfWeek}`];
+        }
+
+        console.log(dayFinder("05/22/1946"),
+            dayFinder("01/20/2001"),
+            dayFinder("03/15/1988"))
+    </script>
+</body>
+
+</html>
