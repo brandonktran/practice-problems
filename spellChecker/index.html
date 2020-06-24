@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function spellChecker(userWords, correctWords) {
+            const result = { correct: [], incorrect: [] };
+            for (let i = 0; i < correctWords.length; i++) {
+                if (userWords[i] === correctWords[i]) {
+                    result.correct.push(correctWords[i]);
+                } else {
+                    result.incorrect.push(userWords[i]);
+                }
+            }
+            return result;
+        }
+        console.log(spellChecker(["boy", "duct", "ice cream", "sendwich"], ["boy", "duck", "ice cream", "sandwich"]),
+            spellChecker(["jam", "breat", "sound"], ["jam", "bread", "sound"]),
+            spellChecker(["java", "CDS", "HTMO"], ["java", "CSS", "HTML"]))
+    </script>
+</body>
+
+</html>
